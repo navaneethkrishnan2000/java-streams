@@ -3,11 +3,10 @@ package com.example.interview_prep.intermediate;
 import com.example.interview_prep.intermediate.dto.Employee;
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 // Find the highest paid employee in each department
-public class HighestPaidByDept {
+public class HighestPaidEmployeeInEachDepartment {
     public static void main(String[] args) {
 
         List<Employee> employees = Arrays.asList(

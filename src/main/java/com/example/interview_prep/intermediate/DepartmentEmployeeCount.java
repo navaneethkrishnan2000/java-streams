@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 // Find all departments with more than 2 employees
-public class DEpartmentEmployeeCount {
+public class DepartmentEmployeeCount {
     public static void main(String[] args) {
         List<Employee> employees = List.of(
                 new Employee(1,"John", "IT", 60000),
