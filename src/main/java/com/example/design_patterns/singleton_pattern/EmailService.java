@@ -1,4 +1,4 @@
-package com.example.design_patterns;
+package com.example.design_patterns.singleton_pattern;
 
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class SingletonPattern_EmailService {
+public class EmailService {
     public void sendEmail() {
         System.out.println("Email sent!");
     }
