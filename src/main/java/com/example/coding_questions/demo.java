@@ -1,8 +1,6 @@
 package com.example.coding_questions;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -14,21 +12,31 @@ public class demo {
         int[] b = {3, 4, 5};
         int[] c = {4, 5, 6};
 
-        Map<Integer, Long> boxed = Stream.of(a, b, c)
+        System.out.println(Arrays.asList(a,b,c).stream().flatMapToInt(Arrays::stream).boxed().sorted().toList());
+
+        List<Integer> collect = Stream.of(a, b, c)
                 .flatMapToInt(Arrays::stream)
                 .boxed()
-                .collect(Collectors.groupingBy(
-                        Function.identity(),
-                        Collectors.counting()
-                ));
-        System.out.println(boxed);
-
-        List<Integer> list = boxed.entrySet()
-                .stream()
-                .filter(entry -> entry.getValue() > 1)
-                .map(Map.Entry::getKey)
                 .toList();
 
-        System.out.println(list);
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : collect) {
+            if (!set.add(num)) {
+                System.out.println(num);
+            }
+        }
+
+//        System.out.println(list);
+
+    }
+}
+
+class Product implements Comparable<Product> {
+    private Long id;
+    private String name;
+    private String quantity;
+    @Override
+    public int compareTo(Product o) {
+        return Long.compare(this.id,o.id);
     }
 }
