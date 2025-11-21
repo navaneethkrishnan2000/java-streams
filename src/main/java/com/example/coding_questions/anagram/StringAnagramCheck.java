@@ -1,4 +1,4 @@
-package com.example.coding_questions;
+package com.example.coding_questions.anagram;
 
 /*
 *   They have exactly the same characters
