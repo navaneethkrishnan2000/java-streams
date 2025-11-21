@@ -19,18 +19,24 @@ public class TwoSum {
 
         for(int i=0; i<nums.length; i++) {
             int currentNum = nums[i];
+            System.out.println("currentNum " + currentNum);
             int complement = target - currentNum;
+            System.out.println("complement " + complement);
 
             // Check if the required complement is already in our map (meaning we found the pair)
+            System.out.println("containsKey " + map.containsKey(complement));
             if (map.containsKey(complement)) {
                 // Return the index of the complement we stored earlier
                 // and the index of the current number we just found.
+                System.out.println(Arrays.toString(new int[]{map.get(complement), i}));
                 return new int[]{map.get(complement), i};
             }
 
             // If the complement is not found yet, store the *current* complement we need
             // and its index for a future number to find.
+            System.out.println(map.put(nums[i], i));
             map.put(nums[i], i);
+            System.out.println("-----------------");
         }
         // According to problem constraints, a solution always exists.
         // This line is here for completeness if constraints change.
