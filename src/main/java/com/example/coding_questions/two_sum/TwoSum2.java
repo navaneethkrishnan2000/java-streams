@@ -20,6 +20,8 @@ public class TwoSum2 {
             }
             map.put(complement, i);
         }
-        System.out.println(Arrays.toString(list.toArray()));
+        for (int[] array : list) {
+            System.out.println(Arrays.toString(array));
+        }
     }
 }
