@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class findSecondLargest {
+public class FindSecondLargest {
     public static void main(String[] args) {
 
         List<Integer> list1 = Arrays.asList(10, 20, 4, 45, 99);
