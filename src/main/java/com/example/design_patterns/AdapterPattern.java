@@ -8,7 +8,7 @@ package com.example.design_patterns;
  | **Spring MVC HandlerAdapter**             | Converts incoming request to appropriate controller    |
  | **Spring Security AuthenticationManager** | Adapts various authentication providers                |
  | **JPA Hibernate Adapter**                 | Converts Spring Data Repository calls to Hibernate API |
- | **RestTemplate/Feign**                    | Adapts your method call → HTTP request                 |
+ | **RestTemplate/Feign**                     | Adapts your method call → HTTP request                 |
 
  */
 public class AdapterPattern {
