@@ -2,12 +2,24 @@ package com.example.design_patterns;
 
 /**
  * The Strategy pattern defines a family of algorithms, encapsulates each one and make them interchangeable at runtime.
- * In simple words: Behavior can be changed without changing the client code
+ * In simple words: Behavior can be changed without changing the client code.
 
- * Without strategy pattern:
- *      Too many if/else or switch
- *      Hard to add new behavior
- *      Violates Open-Closed Principle
+ * It is a behavioural design pattern that allows you to define multiple algorithms(strategies) for a specific task
+   and choose which one to use at runtime -without changing the code that uses them.
+
+    "You define different ways to perform a task
+        and decide which one to use dynamically"
+
+   Without strategy pattern:
+    - Too many if/else or switch
+    - Hard to add new behavior
+    - Violates Open-Closed Principle
+
+   Advantages
+    - Loose coupling
+    - Open/Closed principle
+    - Improved flexibility
+    - Simplified Code
  */
 interface PaymentStrategy {
     void pay(double amount);

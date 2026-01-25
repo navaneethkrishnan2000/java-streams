@@ -17,21 +17,6 @@ package com.example.design_patterns.SOLID;
      }
 */
 
-public class Open_Or_Closed_Principle {
-    public static void main(String[] args) {
-
-        PaymentService razorpayService = new PaymentService(new RazorpayPayment());
-        razorpayService.processPayment();
-
-        PaymentService stripeService = new PaymentService(new StripePayment());
-        stripeService.processPayment();
-
-        // just add this in-case it you want to add a new payment method
-        PaymentService payPalService = new PaymentService(new PaypalPayment());
-        payPalService.processPayment();
-    }
-}
-
 interface PaymentStrategy {
     void pay();
 }
@@ -67,5 +52,20 @@ class PaymentService {
 
     public void processPayment() {
         paymentStrategy.pay();
+    }
+}
+
+public class Open_Or_Closed_Principle {
+    public static void main(String[] args) {
+
+        PaymentService razorpayService = new PaymentService(new RazorpayPayment());
+        razorpayService.processPayment();
+
+        PaymentService stripeService = new PaymentService(new StripePayment());
+        stripeService.processPayment();
+
+        // just add this in-case it you want to add a new payment method
+        PaymentService payPalService = new PaymentService(new PaypalPayment());
+        payPalService.processPayment();
     }
 }

@@ -1,8 +1,6 @@
 package com.example.interview_prep.intermediate;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -21,6 +19,13 @@ public class MostFrequentChar {
         for (char c : input.toCharArray()) {
             map.put(c, map.getOrDefault(c,0) + 1);
         }
+
+        Integer max = Collections.max(
+                map.entrySet(),
+                Map.Entry.comparingByValue()
+        ).getValue();
+        System.out.println(max);
+
         char mostFrequentChar = 0;
         int maxCount = 0;
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
