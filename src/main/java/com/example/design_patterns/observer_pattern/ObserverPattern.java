@@ -27,10 +27,10 @@ import java.util.List;
  - To avoid writing "if-else" for every dependent class.
  */
 
-interface Observer {
+interface Observer { // subscribers
     void update(String message);
 }
-interface Subject {
+interface Subject { // publisher interface
     void registerObserver(Observer observer);
     void removeObserver(Observer observer);
     void notifyObservers(String message);
